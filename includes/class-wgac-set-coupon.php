@@ -66,7 +66,7 @@ class WCGAC_Set_Coupon {
 		public static function create_coupon( $order_id, $old_status, $new_status ) {
 		if( $new_status == "completed" ) {			
 			$order = wc_get_order( $order_id );
-			$_couponName = "wgac-".$order_id; 
+			$_couponName = "wgac-".(time());
 			$_customer_email= $order->get_billing_email();
 			$_newCouponID = 0;
 			$isCreatedBefore = false;
